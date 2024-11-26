@@ -36,6 +36,9 @@
   justify-content: space-between;
 }
 
+.elements__content-description-like {
+}
+
 .elements__content-description p {
   margin: 0;
   font-family: Inter;
@@ -43,4 +46,7 @@
   font-weight: 900;
   line-height: 29.05px;
   text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

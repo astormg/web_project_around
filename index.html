@@ -10,98 +10,99 @@
   <title>Around</title>
 </head>
 <body>
-<div class="page">
-  <header>
-    <div class="header">
-      <img src="./images/header.png" alt="Around" class="header__image">
+  <div class="page">
+    <header>
+      <div class="header">
+        <img src="./images/header.png" alt="Around" class="header__image">
+      </div>
+    </header>
+    <section class="profile">
+      <div class="profile__avatar">
+        <img src="./images/avatar.jpg" alt="Avatar">
+      </div>
+      <div class="profile__info">
+        <div class="profile__info-header">
+          <p class="profile__info-name">Jacques Cousteau</p>
+          <button class="profile__info-button"></button>
+        </div>
+        <p class="profile__info-description">Explorador</p>
+      </div>
+      <button class="profile__button"></button>
+    </section>
+    <section class="elements">
+      <div class="elements__content">
+        <div class="elements__content-container">
+          <img src="./images/1.jpg" alt="Vale de Yosemite" class="elements__content-container-image">
+        </div>
+        <div class="elements__content-description">
+          <p>Vale de Yosemite</p>
+          <img src="./images/heart.svg" alt="heart" class="elements__content-description-like">
+        </div>
+      </div>
+      <div class="elements__content">
+        <div class="elements__content-container">
+          <img src="./images/2.png" alt="Lago Louise" class="elements__content-container-image">
+        </div>
+        <div class="elements__content-description">
+          <p>Lago Louise</p>
+          <img src="./images/heart.png" alt="heart" class="elements__content-description-like">
+        </div>
+      </div>
+      <div class="elements__content">
+        <div class="elements__content-container">
+          <img src="./images/3.png" alt="Montanhas Care..." class="elements__content-container-image">
+        </div>
+        <div class="elements__content-description">
+          <p>Montanhas Care</p>
+          <img src="./images/heart.svg" alt="heart" class="elements__content-description-like">
+        </div>
+      </div>
+      <div class="elements__content">
+        <div class="elements__content-container">
+          <img src="./images/4.png" alt="Latemar" class="elements__content-container-image">
+        </div>
+        <div class="elements__content-description">
+          <p>Latemar</p>
+          <img src="./images/heart.svg" alt="heart" class="elements__content-description-like">
+        </div>
+      </div>
+      <div class="elements__content">
+        <div class="elements__content-container">
+          <img src="./images/5.png" alt="Parque Nacional..." class="elements__content-container-image">
+        </div>
+        <div class="elements__content-description">
+          <p>Parque Nacional</p>
+          <img src="./images/heart.svg" alt="heart" class="elements__content-description-like">
+        </div>
+      </div>
+      <div class="elements__content">
+        <div class="elements__content-container">
+          <img src="./images/6.png" alt="Lago de Braies" class="elements__content-container-image">
+        </div>
+        <div class="elements__content-description">
+          <p>Lago de Braies</p>
+          <img src="./images/heart.svg" alt="heart" class="elements__content-description-like">
+        </div>
+      </div>
+    </section>
+  <footer class="footer">
+    <p>© 2024 Around The U.S.</p>
+  </footer>
+  <div class="popup">
+    <div class="popup__overlay"></div>
+    <div class="popup__container">
+      <button class="popup__close"></button>
+      <h2 class="popup__title">Editar perfil</h2>
+      <form class="popup__form">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Nome" />
+        <label for="about">Sobre mim</label>
+        <input type="text" id="about" name="about" placeholder="Sobre mim" />
+        <button type="submit" class="popup__save">Salvar</button>
+      </form>
     </div>
-  </header>
-  <section class="profile">
-    <div class="profile__avatar">
-      <img src="./images/avatar.jpg" alt="Avatar">
-    </div>
-    <div class="profile__info">
-      <div class="profile__info-header">
-        <p class="profile__info-name">Jacques Cousteau</p>
-        <button class="profile__info-button"></button>
-      </div>
-      <p class="profile__info-description">Explorador</p>
-    </div>
-    <button class="profile__button"></button>
-  </section>
-  <section class="elements">
-    <div class="elements__content">
-      <div class="elements__content-container">
-        <img src="./images/1.jpg" alt="Vale de Yosemite" class="elements__content-container-image">
-      </div>
-      <div class="elements__content-description">
-        <p>Vale de Yosemite</p>
-        <img src="./images/heart.svg" alt="heart">
-      </div>
-    </div>
-    <div class="elements__content">
-      <div class="elements__content-container">
-        <img src="./images/2.png" alt="Lago Louise" class="elements__content-container-image">
-      </div>
-      <div class="elements__content-description">
-        <p>Lago Louise</p>
-        <img src="./images/heart.svg" alt="heart">
-      </div>
-    </div>
-    <div class="elements__content">
-      <div class="elements__content-container">
-        <img src="./images/3.png" alt="Montanhas Care..." class="elements__content-container-image">
-      </div>
-      <div class="elements__content-description">
-        <p>Montanhas Care...</p>
-        <img src="./images/heart.svg" alt="heart">
-      </div>
-    </div>
-    <div class="elements__content">
-      <div class="elements__content-container">
-        <img src="./images/4.png" alt="Latemar" class="elements__content-container-image">
-      </div>
-      <div class="elements__content-description">
-        <p>Latemar</p>
-        <img src="./images/heart.svg" alt="heart">
-      </div>
-    </div>
-    <div class="elements__content">
-      <div class="elements__content-container">
-        <img src="./images/5.png" alt="Parque Nacional..." class="elements__content-container-image">
-      </div>
-      <div class="elements__content-description">
-        <p>Parque Nacional...</p>
-        <img src="./images/heart.svg" alt="heart">
-      </div>
-    </div>
-    <div class="elements__content">
-      <div class="elements__content-container">
-        <img src="./images/6.png" alt="Lago de Braies" class="elements__content-container-image">
-      </div>
-      <div class="elements__content-description">
-        <p>Lago de Braies</p>
-        <img src="./images/heart.svg" alt="heart">
-      </div>
-    </div>
-  </section>
-<footer class="footer">
-  <p>© 2024 Around The U.S.</p>
-</footer>
-<div class="popup">
-  <div class="popup__overlay"></div>
-  <div class="popup__container">
-    <button class="popup__close"></button>
-    <h2 class="popup__title">Editar perfil</h2>
-    <form class="popup__form">
-      <label for="name">Nome</label>
-      <input type="text" id="name" name="name" placeholder="Nome" />
-      <label for="about">Sobre mim</label>
-      <input type="text" id="about" name="about" placeholder="Sobre mim" />
-      <button type="submit" class="popup__save">Salvar</button>
-    </form>
   </div>
-</div>
-</div>
+  </div>
+  <script src="./scripts/edit.js"></script>
 </body>
 </html>

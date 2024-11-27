@@ -1,10 +1,23 @@
 .header{
+  width: 880px;
+  height: 74px;
   margin: 0;
+  margin-left: 200px;
+  border-bottom: 1px solid #545454;
   padding-top: 45px;
 }
 
-.header__image {
-  width: 880px;
-  height: 74px;
-  margin-left: 200px;
+@media screen and (min-width: 320px) and (max-width: 1280px) {
+  .header{
+    width: 320px;
+    height: 56px;
+    margin-left: 0px;
+    padding-top: 28px;
+  }
+
+  .header__image{
+    margin-left: 27px;
+  }
+
+
 }

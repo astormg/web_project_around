@@ -1,10 +1,17 @@
+let profileNameActive = document.querySelector(".profile__info-name");
+let profileJobActive = document.querySelector(".profile__info-description");
+let nameActive = profileNameActive.textContent;
+let jobActive = profileJobActive.textContent;
+
 function openFormPopup() {
-  let formElementPopup = document.querySelector(".popup")
+  let nameInput = document.querySelector("#name");
+  let jobInput = document.querySelector("#about");
   formElement.classList.add("popup_opened");
+  nameInput.value = nameActive;
+  jobInput.value = jobActive;
 }
 
 function closeFormPopup() {
-  let formElementPopup = document.querySelector(".popup")
   formElement.classList.remove("popup_opened");
 }
 

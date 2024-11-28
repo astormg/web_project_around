@@ -1,8 +1,8 @@
 .elements {
   width: 880px;
   height: 743px;
-  margin-top: 50px;
-  margin-left: 200px;
+  padding-top: 50px;
+  margin: 0 auto ;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);

@@ -11,7 +11,7 @@
   .header{
     width: 320px;
     height: 56px;
-    margin-left: 0px;
+    margin: 0 auto;
     padding-top: 28px;
   }
 

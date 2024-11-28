@@ -91,3 +91,25 @@
 .popup_opened {
   display: flex;
 }
+
+@media screen and (min-width: 320px) and (max-width: 1280px) {
+ .popup_opened {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .popup__container {
+    width: 282px;
+    height: 322px;
+    padding-bottom: 0;
+  }
+
+  .popup__close {
+    width: 26px;
+    height: 26px;
+    bottom: 13.62px;
+    right: 0;
+  }
+
+}

@@ -1,3 +1,5 @@
+let tableCard = document.querySelector(".elements")
+
 const initialCards = [
   {
     name: "Vale de Yosemite",
@@ -83,3 +85,25 @@ function handleProfileFormSubmit(evt) {
 // Conecte o handler ao formulário:
 // ele vai observar o evento de submit
 formElement.addEventListener('submit', handleProfileFormSubmit);
+
+function createCard(card) {
+  const cardTemplate = document.querySelector("#template-card").content;
+  const cardElement = cardTemplate.querySelector(".elements__content").cloneNode(true);
+  cardElement.querySelector(".elements__content-description-name").textContent = card.name;
+  cardElement.querySelector(".elements__content-container-image").setAttribute("src", card.link);
+  cardElement.querySelector(".elements__content-container-image").setAttribute("alt", card.name);
+  return cardElement;
+};
+
+for (const card of initialCards) {
+  const newCard = createCard(card);
+  tableCard.prepend(newCard);
+}
+
+function addNewElement(evt) {
+  evt.preventDefault();
+  createCard({
+    name: "Teste", 
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg"
+  });
+}

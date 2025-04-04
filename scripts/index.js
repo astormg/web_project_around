@@ -34,29 +34,37 @@ function openFormPopup() {
   let jobActive = profileJobActive.textContent;
   let nameInput = document.querySelector("#name");
   let jobInput = document.querySelector("#about");
-  formElement.classList.add("popup_opened");
+  formProfile.classList.add("popup_opened");
   nameInput.value = nameActive;
   jobInput.value = jobActive;
 }
 
 function closeFormPopup() {
-  formElement.classList.remove("popup_opened");
+  formProfile.classList.remove("popup_opened");
 }
 
 let btnOpenForm = document.querySelector(".profile__info-button");
 let btnCloseForm = document.querySelector(".popup__close");
-
 btnOpenForm.addEventListener('click', openFormPopup);
 btnCloseForm.addEventListener('click', closeFormPopup);
 
+function openFormPopupElement() {
+  formElement.classList.add("popupElement_opened");
+}
+
+function closeFormPopupElement() {
+  formElement.classList.remove("popupElement_opened");
+}
+
+let btnOpenFormElement = document.querySelector(".profile__button");
+let btnCloseFormElement = document.querySelector(".popupElement__close");
+btnOpenFormElement.addEventListener('click', openFormPopupElement);
+btnCloseFormElement.addEventListener('click', closeFormPopupElement);
+
 // Vamos encontrar o formulário no DOM
-let formElement = document.querySelector(".popup");// Use o método querySelector()
+let formProfile = document.querySelector(".popup");// Use o método querySelector()
+let formElement = document.querySelector(".popupElement");
 
-// Em seguida vem o handler do submit
-// ainda não vai enviar para lugar nenhum
-
-// Observe que o nome da função começa com um verbo
-// e descreve exatamente o que a função faz
 function handleProfileFormSubmit(evt) {
     // Esta linha impede o navegador
     // de enviar o formulário da forma padrão.
@@ -80,11 +88,31 @@ function handleProfileFormSubmit(evt) {
     // propriedade textContent
     profileName.textContent = nameValue;
     profileJob.textContent = jobValue;
+    formProfile.classList.remove("popup_opened");
 }
 
-// Conecte o handler ao formulário:
-// ele vai observar o evento de submit
-formElement.addEventListener('submit', handleProfileFormSubmit);
+function handleElementFormSubmit(evt) {
+  // Esta linha impede o navegador
+  // de enviar o formulário da forma padrão.
+  evt.preventDefault();
+
+  let titleInput = document.querySelector("#title");// Use querySelector()
+  let linkInput = document.querySelector("#link");// Use querySelector()
+  let titleValue = titleInput.value;
+  let linkValue = linkInput.value;
+
+  if(titleValue != "" && linkValue != ""){
+    const newCard = createCard({name: titleValue, link: linkValue});
+    tableCard.prepend(newCard);
+  }
+
+  titleInput.value = "";
+  linkInput.value = "";
+  formElement.classList.remove("popupElement_opened");
+}
+
+formProfile.addEventListener('submit', handleProfileFormSubmit);
+formElement.addEventListener('submit', handleElementFormSubmit);
 
 function createCard(card) {
   const cardTemplate = document.querySelector("#template-card").content;
@@ -92,18 +120,41 @@ function createCard(card) {
   cardElement.querySelector(".elements__content-description-name").textContent = card.name;
   cardElement.querySelector(".elements__content-container-image").setAttribute("src", card.link);
   cardElement.querySelector(".elements__content-container-image").setAttribute("alt", card.name);
+  cardElement.querySelector(".elements__content_container-trash").addEventListener("click", (event)=>{
+    event.target.parentElement.parentElement.parentElement.remove()});
+  cardElement.querySelector(".elements__content-container-image").addEventListener("click", () => {
+    openImagePopup(card.link, card.name)});
+  const likeIcon = cardElement.querySelector(".elements__content-description-like");
+
+  likeIcon.addEventListener("click", () => {
+    const currentSrc = likeIcon.getAttribute("src");
+    const isLiked = currentSrc.includes("Union.png");
+    likeIcon.setAttribute("src", isLiked ? "./images/heart.png" : "./images/Union.png");
+  });
+
   return cardElement;
 };
 
 for (const card of initialCards) {
   const newCard = createCard(card);
   tableCard.prepend(newCard);
+};
+
+let popupImage = document.querySelector(".popupImage");
+let popupImagePhoto = document.querySelector(".popupImage__photo");
+let popupImageClose = document.querySelector(".popupImage__close");
+
+function openImagePopup(link, name) {
+  popupImage.classList.add("popupImage_opened");
+  popupImagePhoto.src = link;
+  popupImagePhoto.alt = name;
 }
 
-function addNewElement(evt) {
-  evt.preventDefault();
-  createCard({
-    name: "Teste", 
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg"
-  });
+function closeImagePopup() {
+  popupImage.classList.remove("popupImage_opened");
+  popupImagePhoto.src = "";
+  popupImagePhoto.alt = "";
 }
+
+popupImageClose.addEventListener("click", closeImagePopup);
+popupImage.querySelector(".popupImage__overlay").addEventListener("click", closeImagePopup);

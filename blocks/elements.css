@@ -16,8 +16,17 @@
 }
 
 .elements__content-container {
+  position: relative;
   width: 282px;
   height: 282px;
+}
+
+.elements__content_container-trash {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 18px;
+  right: 15px;
 }
 
 .elements__content-container-image {
@@ -33,9 +42,6 @@
   margin: 25px 0 0 21px;
   display: flex;
   justify-content: space-between;
-}
-
-.elements__content-description-like {
 }
 
 .elements__content-description p {

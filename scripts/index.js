@@ -124,8 +124,8 @@ function createCard(card) {
     event.target.parentElement.parentElement.parentElement.remove()});
   cardElement.querySelector(".elements__content-container-image").addEventListener("click", () => {
     openImagePopup(card.link, card.name)});
-  const likeIcon = cardElement.querySelector(".elements__content-description-like");
 
+  const likeIcon = cardElement.querySelector(".elements__content-description-like");
   likeIcon.addEventListener("click", () => {
     const currentSrc = likeIcon.getAttribute("src");
     const isLiked = currentSrc.includes("Union.png");
@@ -143,11 +143,13 @@ for (const card of initialCards) {
 let popupImage = document.querySelector(".popupImage");
 let popupImagePhoto = document.querySelector(".popupImage__photo");
 let popupImageClose = document.querySelector(".popupImage__close");
+let popupImageTitle = document.querySelector(".popupImage__title");
 
 function openImagePopup(link, name) {
   popupImage.classList.add("popupImage_opened");
   popupImagePhoto.src = link;
   popupImagePhoto.alt = name;
+  popupImageTitle.textContent = name;
 }
 
 function closeImagePopup() {

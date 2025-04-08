@@ -25,13 +25,18 @@
 }
 
 .popupImage__title {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 29px;
-  margin-bottom: 20px;
-  color: #000000;
+  position: absolute;
+  width: 291px;
+  height: 12px;
+  left: 0;
+  margin: 0;
+  bottom: -10px;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
 }
 
 .popupImage__close {
@@ -63,16 +68,14 @@
   }
 
   .popupImage__container {
-    width: 282px;
-    height: 322px;
     padding-bottom: 0;
   }
 
   .popupImage__close {
-    width: 26px;
-    height: 26px;
-    bottom: 13.62px;
-    right: 0;
+    width: 30px;
+    height: 30px;
+    top: -36.43px;
+    right: -36.43px;
   }
 
 }

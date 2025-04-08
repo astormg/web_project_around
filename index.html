@@ -30,60 +30,6 @@
       <button class="profile__button"></button>
     </section>
     <section class="elements">
-      <!--<div class="elements__content">
-        <div class="elements__content-container">
-          <img src="./images/1.jpg" alt="Vale de Yosemite" class="elements__content-container-image">
-        </div>
-        <div class="elements__content-description">
-          <p>Vale de Yosemite</p>
-          <img src="./images/heart.svg" alt="heart" class="elements__content-description-like">
-        </div>
-      </div>
-      <div class="elements__content">
-        <div class="elements__content-container">
-          <img src="./images/2.png" alt="Lago Louise" class="elements__content-container-image">
-        </div>
-        <div class="elements__content-description">
-          <p>Lago Louise</p>
-          <img src="./images/heart.png" alt="heart" class="elements__content-description-like">
-        </div>
-      </div>
-      <div class="elements__content">
-        <div class="elements__content-container">
-          <img src="./images/3.png" alt="Montanhas Care..." class="elements__content-container-image">
-        </div>
-        <div class="elements__content-description">
-          <p>Montanhas Care</p>
-          <img src="./images/heart.svg" alt="heart" class="elements__content-description-like">
-        </div>
-      </div>
-      <div class="elements__content">
-        <div class="elements__content-container">
-          <img src="./images/4.png" alt="Latemar" class="elements__content-container-image">
-        </div>
-        <div class="elements__content-description">
-          <p>Latemar</p>
-          <img src="./images/heart.svg" alt="heart" class="elements__content-description-like">
-        </div>
-      </div>
-      <div class="elements__content">
-        <div class="elements__content-container">
-          <img src="./images/5.png" alt="Parque Nacional..." class="elements__content-container-image">
-        </div>
-        <div class="elements__content-description">
-          <p>Parque Nacional</p>
-          <img src="./images/heart.svg" alt="heart" class="elements__content-description-like">
-        </div>
-      </div>
-      <div class="elements__content">
-        <div class="elements__content-container">
-          <img src="./images/6.png" alt="Lago de Braies" class="elements__content-container-image">
-        </div>
-        <div class="elements__content-description">
-          <p>Lago de Braies</p>
-          <img src="./images/heart.svg" alt="heart" class="elements__content-description-like">
-        </div>
-      </div>-->
     </section>
   <footer class="footer">
     <p>© 2024 Around The U.S.</p>
@@ -109,17 +55,18 @@
       <h2 class="popupElement__title">Novo local</h2>
       <form class="popupElement__form">
         <label for="title"></label>
-        <input type="text" id="title" name="title" placeholder="Título" />
+        <input type="text" id="title" name="title" placeholder="Título" required />
         <label for="link"></label>
-        <input type="text" id="link" name="link" placeholder="Link de Imagem" />
+        <input type="text" id="link" name="link" placeholder="Link de Imagem" required />
         <button type="submit" class="popupElement__save">Criar</button>
       </form>
     </div>
   </div>
   <div class="popupImage">
     <div class="popupImage__container">
-        <button class="popupImage__close"></button>
-        <img class="popupImage__photo" src="" alt="">
+      <button class="popupImage__close"></button>
+      <img class="popupImage__photo" src="" alt="">
+      <p class="popupImage__title"></p>
     </div>
   </div>
 </div>
